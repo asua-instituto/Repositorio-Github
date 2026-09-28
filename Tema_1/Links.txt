@@ -1,0 +1,15 @@
+Descargar JDK (Java Development Kit) URL:
+
+https://www.oracle.com/java/technologies/downloads/
+
+Descargar Apache Netbeans URL:
+
+https://netbeans.apache.org/front/main/download/index.html
+
+Configurar variables de entorno para Java URL (Youtube):
+
+https://www.youtube.com/watch?v=flhyaMlhkBg
+
+Documentación de Java:
+
+https://docs.oracle.com/javase/8/docs/api/

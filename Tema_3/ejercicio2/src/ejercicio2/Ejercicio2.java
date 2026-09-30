@@ -38,8 +38,6 @@ public class Ejercicio2 {
         System.out.println("Ahora introduce el segundo numero: ");
         num2 = input.nextInt();
                 
-        
-
         if (num1 > 10){
             num1 *= num2;
             System.out.println("El resultado de esta operacion es una multiplicacion: "+num1);

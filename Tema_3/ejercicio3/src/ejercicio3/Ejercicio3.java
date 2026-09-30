@@ -40,9 +40,17 @@ public class Ejercicio3 {
         System.out.println("Por favor, introduzca el tercer numero: ");
         num3 = input.nextInt();
         
-        if (num1 > num2 && num2 < num3){
-            
+        int mayor;
+        
+        if (num1 >= num2 && num1 >= num3){
+            mayor = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            mayor = num2;
+        } else {
+            mayor = num3;
         }
+        
+        System.out.println("El numero mayor de los introducidos es el: "+mayor);
             
     }
     

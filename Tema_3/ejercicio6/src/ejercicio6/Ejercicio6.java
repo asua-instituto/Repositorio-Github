@@ -41,6 +41,15 @@ public class Ejercicio6 {
             case 0:
                 System.out.println("Tienes un: SUSPENSO");
                 break;
+            case 1:
+                System.out.println("Tienes un: SUSPENSO");
+                break;
+            case 2:
+                System.out.println("Tienes un: SUSPENSO");
+                break;
+            case 3:
+                System.out.println("Tienes un: SUSPENSO");
+                break;
             case 4:
                 System.out.println("Tienes un: SUSPENSO");
                 break;

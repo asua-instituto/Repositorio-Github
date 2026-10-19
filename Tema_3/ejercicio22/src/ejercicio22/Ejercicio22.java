@@ -43,7 +43,7 @@ public class Ejercicio22 {
             operacion = num1 + num2;
             
         }catch (InputMismatchException e){
-            System.out.println("Error de numeracion; Haz puesto un dato no nomerico");
+            System.out.println("Error de numeracion; Haz puesto un dato NO entero");
             operacion = 0;
         } finally {
             System.out.println("La captura ha finalizado");

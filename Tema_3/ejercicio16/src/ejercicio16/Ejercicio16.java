@@ -6,7 +6,7 @@ package ejercicio16;
 
 /**
  *
- * @author espmi
+ * @author Michael Asua Trinitario
  * 
  */
 public class Ejercicio16 {

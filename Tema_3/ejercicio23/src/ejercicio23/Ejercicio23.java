@@ -44,7 +44,7 @@ public class Ejercicio23 {
                     System.out.println("Error: Tio haz puesto un numero debajo del 1");
                 }        
             }catch (InputMismatchException e){
-                System.out.println("Error de instruccion");
+                System.out.println("Error de instruccion" + e.getMessage());
             }
         }while (num2 <= 1);
             

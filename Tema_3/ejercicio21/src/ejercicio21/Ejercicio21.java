@@ -5,8 +5,6 @@
 package ejercicio21;
 
 // importamos su correspondiente herramienta InputMismatchException
-import java.util.InputMismatchException;
-
 import java.util.Scanner;
 
 /**
@@ -50,7 +48,7 @@ public class Ejercicio21 {
         
             // Declaramos el error y le ponemos 0 para que 
             
-            } catch (InputMismatchException e) {
+            } catch (ArithmeticException e) {
                 System.out.println("Error de numerico; Haz puesto un dato no numerico ej. (g,@ etc...)");
                 operacion = 0;
             } finally {

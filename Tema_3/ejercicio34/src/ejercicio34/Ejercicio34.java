@@ -38,14 +38,15 @@ public class Ejercicio34 {
         // Variables de manejo de informacion
         int minutosTotal_s, minutosTotal_l, diferenciaMinutos, traslado_hora, traslado_minutos, i = 0;
         
+        //
+        boolean ticket = false;
+        
         // Pedimos los datos al (usuario)
         
         Scanner input = new Scanner (System.in);
         
         do {
-            
-            try {
-                                // Dia:5 Hora:6 Minuto:20
+            // Dia:5 Hora:6 Minuto:20
             System.out.println("Introduce el boleto de [SALIDA] del tren en el siguiente formato:");
                 System.out.println("---DATOS SALIDA ---");
                     System.out.println("[Dia]: ");
@@ -64,8 +65,10 @@ public class Ejercicio34 {
                         boleto_l_hora = input.nextInt();
                     System.out.println("[Minuto] (0-59): ");
                         boleto_l_minuto = input.nextInt();
-                    i++;
-                        if (boleto_s_hora < 0 || boleto_s_hora > 23 || boleto_s_minuto < 0 || boleto_s_minuto > 59 || boleto_l_hora < 0 || boleto_l_minuto > 23){
+                    // Validar si los datos tienen sentido antes de trabajar con ellos
+                        if (boleto_s_hora >= 0 || boleto_s_hora <= 23 ||
+                                boleto_s_minuto >= 0 || boleto_s_minuto <= 59 ||
+                                boleto_l_hora >= 0 || boleto_l_minuto >= 23){
                             
                             // Normalizamos los valores a unidad más pequeña (Minutos) para trabajar más comodo con los valores.
                             minutosTotal_s = ((boleto_s_dia * 24) * 60) + (boleto_s_hora * 60) + boleto_s_minuto;
@@ -74,22 +77,18 @@ public class Ejercicio34 {
                             //Restamos la diferencia entre ambos valores:
                             diferenciaMinutos = minutosTotal_l - minutosTotal_s;
                             
-                            traslado_hora = diferenciaMinutos / 60;
-                            traslado_minutos = diferenciaMinutos % 60;
+                            traslado_hora = diferenciaMinutos / 60; // obtenemos los unidad.
+                            traslado_minutos = diferenciaMinutos % 60; // obtenemos el resto.
                             
                             // Imprimimos por pantalla (usuario)
-                            
                             System.out.println("\nTiempo de traslado: Horas: " + traslado_hora + " y Minutos: " + traslado_minutos);
-                            break;
-            
-                                } else if(boleto_l_dia < boleto_s_dia){
+                            ticket = true;
+                            // Salida 5 llegada 4
+                                } else if(boleto_s_dia < boleto_l_dia){
                                     System.out.println("ERROR; No eres un viajero del tiempo");
-                                    break;
                                 }
-                        } catch (InputMismatchException e){
-                            System.out.println("Error! Tio no haz escrito un numero.");
-                        }
-            }while (i < 3);
+                    i++;
+            }while (i > 3);
                             }
 
                         }

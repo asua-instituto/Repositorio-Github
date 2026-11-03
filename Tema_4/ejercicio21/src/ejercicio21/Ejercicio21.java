@@ -28,12 +28,13 @@ public class Ejercicio21 {
     public static void mostrarDatos (int n1, int n2) {
         int suma = 0;
         
-        for (int i = n1;i < n2; i++) {
+        for (int i = n1;i <= n2; i++) {
             if (i % 2 == 0) {
+                System.out.println(i);
                 suma += i;
             }
         }
-        System.out.println("La suma de los números pares entre " + n1 + " y " + n2 + " es: " + suma);
+        System.out.println("La suma de los números pares entre [" + n1 + " y " + n2 + "] es: " + suma);
     }
     
     /**
